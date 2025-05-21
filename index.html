@@ -1,24 +1,105 @@
 <!DOCTYPE html>
-	<html>
+	<html class="theme-dark">		
 		<head>
 			<title>KydaKatArt</title>
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"/>
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<link rel="stylesheet" href="bulma.css"/>
 			<style>
+				/* Fade-in animation for main content */
+				.section {
+					animation: fadeIn 1s ease-in;
+				}
+
+				/* Hover effect for the button */
+				.button.is-primary {
+					transition: transform 0.3s ease, box-shadow 0.3s ease;
+				}
+
+				.button.is-primary:hover {
+					transform: translateY(-2px);
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+				}
+
+				/* Scale animation for images */
+				.box img {
+					transition: transform 0.3s ease;
+				}
+
+				.box:hover img {
+					transform: scale(1.05);
+				}
+
+				/* Smooth navbar transition */
+				.navbar {
+					transition: background-color 0.3s ease;
+				}
+
+				/* Keyframes for fade-in animation */
+				@keyframes fadeIn {
+					from {
+						opacity: 0;
+						transform: translateY(20px);
+					}
+					to {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
 			</style>
 		</head>
 		<body>
 			<header>
-				<nav class="navbar has-background-grey-darker">
-                    <div class="navbar-brand">
-                        <p class="has-text-weight-semibold is-size-2 ml-5 m-2">Kyda Kat Art</p>
+				<nav class="navbar has-background-info is-fixed-top">
+                    <div class="navbar-brand pl-3 p-2">
+						<img src="logo.png" alt="logo" class="image is-64x64">
+                        <p class="has-text-weight-semibold is-size-2 ml-3">Kyda Kat Art</p>
                     </div>
 				</nav>
 			</header>
 			<main>
-				<div class="section">
-                    <p class="has-text-weight-bold is-size-4">Website Stuff!!!</p>
+				<div class="section mx-2 mt-6 is-flex is-justify-content-center is-align-items-space-between has-text-primary">
+					<div class="columns mt-6" style="max-width: 900px;">
+						<div class="columns" style="max-width: 900px;">
+							<div class="column is-two-fifths">
+								<div class="box is-flex is-justify-content-center is-align-items-space-between has-background-link">
+									<img src="darwin.png" alt="painting of fish">
+								</div>
+							</div>
+							<div class="column is-flex is-align-items-center">
+								<div class="is-flex is-flex-direction-column">
+									<p class="is-size-2">Title for Paragraph</p>
+									<p>
+										Some text about instagram or having to do with the stuff that's on istagram or both maybe idk I'm just trying to fill space weith ewhat's likely a run on sentance running on and on and on and on and such and sofourth.
+									</p>
+									<div class="is-justify-content-left mt-2">
+										<a href="/" class="button is-primary">Button</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section mx-2 is-flex is-justify-content-center is-align-items-space-between has-text-primary">
+					<div class="columns" style="max-width: 900px;">
+						<div class="columns" style="max-width: 900px;">
+							<div class="column is-flex is-align-items-center">
+								<div class="is-flex is-flex-direction-column">
+									<p class="is-size-2">Title for Paragraph</p>
+									<p>
+										Some text about instagram or having to do with the stuff that's on istagram or both maybe idk I'm just trying to fill space weith ewhat's likely a run on sentance running on and on and on and on and such and sofourth.
+									</p>
+								</div>
+							</div>
+							<div class="column is-two-fifths">
+								<div class="box is-flex is-justify-content-center is-align-items-space-between has-background-link">
+									<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/kydakatart" data-instgrm-version="14"></blockquote>
+									<script async src="//www.instagram.com/embed.js"></script>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</main>
 			<footer id="footer"></footer>
