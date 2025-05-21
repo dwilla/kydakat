@@ -1,0 +1,6 @@
+# Server is for dev only, intended for hosting on github pages
+
+/tmp/
+.air.toml
+go.mod
+main.go
